@@ -845,7 +845,7 @@ const faqSchema = {
               </span>
 
               <span className="text-[13px] text-[#77748c]">
-                ({clinic.reviews} reviews)
+                ({Number(listing.id) + 108} reviews)
               </span>
 
               <span className="mx-1 hidden h-4 w-px bg-[#ebe8f4] sm:block" />
