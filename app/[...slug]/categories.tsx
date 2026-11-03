@@ -106,11 +106,10 @@ function normalizeListing(raw: Record<string, any>): DisplayListing {
     city_name: raw.city_name ?? "",
     area_name: raw.area_name ?? "",
     category_name: raw.category_name ?? "",
-    
+    reviews:Number(raw.id) + 108,
 
     /* ---------- STATIC DUMMY ---------- */
     rating: 4.5 + (numericId % 5) * 0.1,
-    reviews: 50 + (numericId % 10) * 10,
     consultationModes: ["In-Clinic"],
     openingHours: "9:00 AM - 8:00 PM",
     available: true,
@@ -814,7 +813,8 @@ useEffect(() => {
                           </span>
 
                           <span className="text-xs text-[#9996ad]">
-                            ({clinic.reviews ?? "46"} reviews)
+                            
+                            ({clinic.reviews} reviews)
                           </span>
                         </div>
                       </div>
@@ -949,7 +949,7 @@ useEffect(() => {
                                 </span>
                               </div>
                               <span className="text-[13px] text-[#858098]">
-                                ({clinic.reviews} reviews)
+                               ({clinic.reviews} reviews)
                               </span>
                             </div>
 
